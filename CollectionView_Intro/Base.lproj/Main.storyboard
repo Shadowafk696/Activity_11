@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="s6u-K6-Rjc">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Top Restaurants-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Top Restaurants" id="BYZ-38-t0r" customClass="CollectionViewController" customModule="CollectionView_Intro" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +20,130 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8Nx-7u-C2V">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.22144670050761417" green="0.22144670050761417" blue="0.22144670050761417" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="toO-eD-meH">
+                                    <size key="itemSize" width="187" height="229"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Item" id="gJo-58-0I6" customClass="CollectionViewCell" customModule="CollectionView_Intro" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="187" height="229"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="187" height="229"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AzN-c3-PQB">
+                                                    <rect key="frame" x="1" y="0.0" width="187" height="229"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="El gran marinero" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PYb-9d-lnV">
+                                                    <rect key="frame" x="-8" y="195" width="206" height="34"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <size key="customSize" width="187" height="229"/>
+                                        <connections>
+                                            <outlet property="itemImage" destination="AzN-c3-PQB" id="TnU-fJ-0cu"/>
+                                            <outlet property="itemLabel" destination="PYb-9d-lnV" id="dg1-Oh-Zbv"/>
+                                            <segue destination="gTq-bF-hrp" kind="show" identifier="goToDetail" id="Xz9-Wc-IgW"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="e6B-1o-JNm"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="f7n-MT-BC3"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="8Nx-7u-C2V" secondAttribute="bottom" id="LsR-ZV-jVy"/>
+                            <constraint firstAttribute="trailing" secondItem="8Nx-7u-C2V" secondAttribute="trailing" id="WSS-a1-NNQ"/>
+                            <constraint firstItem="8Nx-7u-C2V" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="nb6-bm-Fqn"/>
+                            <constraint firstItem="8Nx-7u-C2V" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="sbE-jn-TTw"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Select" id="KMb-yQ-nQO"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <connections>
+                        <outlet property="collectionView" destination="8Nx-7u-C2V" id="8Ch-uR-whD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1023.2" y="137.18140929535232"/>
+        </scene>
+        <!--Restaurant-->
+        <scene sceneID="V2v-Ul-M1m">
+            <objects>
+                <viewController id="gTq-bF-hrp" customClass="DetailViewController" customModule="CollectionView_Intro" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2Bb-Ui-Cz9"/>
+                        <viewControllerLayoutGuide type="bottom" id="VC5-HQ-vb9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="85d-Mr-sz4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cocos Locos" translatesAutoresizingMaskIntoConstraints="NO" id="JT3-dx-UfO">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.21957963705062866" green="0.21962407231330872" blue="0.21957683563232422" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="JT3-dx-UfO" firstAttribute="top" secondItem="85d-Mr-sz4" secondAttribute="top" id="AOC-MV-DFY"/>
+                            <constraint firstItem="VC5-HQ-vb9" firstAttribute="top" secondItem="JT3-dx-UfO" secondAttribute="bottom" id="ZnJ-RB-acx"/>
+                            <constraint firstAttribute="trailing" secondItem="JT3-dx-UfO" secondAttribute="trailing" id="kyQ-l7-ELz"/>
+                            <constraint firstItem="JT3-dx-UfO" firstAttribute="leading" secondItem="85d-Mr-sz4" secondAttribute="leading" id="xO3-Zw-fZB"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Restaurant" id="kJW-w4-F9K"/>
+                    <connections>
+                        <outlet property="detailImage" destination="JT3-dx-UfO" id="NcS-vK-Az2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xha-ki-HoP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1772" y="143.47826086956522"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="KAf-Tl-ZPc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="s6u-K6-Rjc" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="0Vi-7t-zRG">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.21957963705062866" green="0.21962407231330872" blue="0.21957683563232422" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="1eT-Bc-Miy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S2w-6h-n51" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="84" y="137.18140929535232"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Cocos Locos" width="338" height="450"/>
+    </resources>
 </document>

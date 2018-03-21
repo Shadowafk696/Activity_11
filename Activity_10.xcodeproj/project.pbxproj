@@ -7,21 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		13087FEB1E3363C100DE5166 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13087FEA1E3363C100DE5166 /* DetailViewController.swift */; };
 		1327FEF41E2CCFFD0068F253 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1327FEF31E2CCFFD0068F253 /* AppDelegate.swift */; };
-		1327FEF61E2CCFFD0068F253 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1327FEF51E2CCFFD0068F253 /* ViewController.swift */; };
+		1327FEF61E2CCFFD0068F253 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1327FEF51E2CCFFD0068F253 /* CollectionViewController.swift */; };
 		1327FEF91E2CCFFD0068F253 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1327FEF71E2CCFFD0068F253 /* Main.storyboard */; };
 		1327FEFB1E2CCFFD0068F253 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1327FEFA1E2CCFFD0068F253 /* Assets.xcassets */; };
 		1327FEFE1E2CCFFD0068F253 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1327FEFC1E2CCFFD0068F253 /* LaunchScreen.storyboard */; };
+		1327FF061E2D19420068F253 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1327FF051E2D19420068F253 /* CollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		13087FEA1E3363C100DE5166 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		1327FEF01E2CCFFD0068F253 /* CollectionView_Intro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CollectionView_Intro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1327FEF31E2CCFFD0068F253 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1327FEF51E2CCFFD0068F253 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1327FEF51E2CCFFD0068F253 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		1327FEF81E2CCFFD0068F253 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1327FEFA1E2CCFFD0068F253 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1327FEFD1E2CCFFD0068F253 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1327FEFF1E2CCFFD0068F253 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1327FF051E2D19420068F253 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +59,9 @@
 			isa = PBXGroup;
 			children = (
 				1327FEF31E2CCFFD0068F253 /* AppDelegate.swift */,
-				1327FEF51E2CCFFD0068F253 /* ViewController.swift */,
+				1327FEF51E2CCFFD0068F253 /* CollectionViewController.swift */,
+				1327FF051E2D19420068F253 /* CollectionViewCell.swift */,
+				13087FEA1E3363C100DE5166 /* DetailViewController.swift */,
 				1327FEF71E2CCFFD0068F253 /* Main.storyboard */,
 				1327FEFA1E2CCFFD0068F253 /* Assets.xcassets */,
 				1327FEFC1E2CCFFD0068F253 /* LaunchScreen.storyboard */,
@@ -96,12 +102,11 @@
 				TargetAttributes = {
 					1327FEEF1E2CCFFC0068F253 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 2NAFC97M9Y;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = 1327FEEB1E2CCFFC0068F253 /* Build configuration list for PBXProject "CollectionView_Intro" */;
+			buildConfigurationList = 1327FEEB1E2CCFFC0068F253 /* Build configuration list for PBXProject "Activity_10" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -137,8 +142,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1327FEF61E2CCFFD0068F253 /* ViewController.swift in Sources */,
+				1327FEF61E2CCFFD0068F253 /* CollectionViewController.swift in Sources */,
 				1327FEF41E2CCFFD0068F253 /* AppDelegate.swift in Sources */,
+				1327FF061E2D19420068F253 /* CollectionViewCell.swift in Sources */,
+				13087FEB1E3363C100DE5166 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,10 +266,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 2NAFC97M9Y;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = CollectionView_Intro/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.efectoapple.CollectionView-Intro";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tecmilenio.activity-10";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -272,10 +280,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 2NAFC97M9Y;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = CollectionView_Intro/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.efectoapple.CollectionView-Intro";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tecmilenio.activity-10";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -284,7 +293,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1327FEEB1E2CCFFC0068F253 /* Build configuration list for PBXProject "CollectionView_Intro" */ = {
+		1327FEEB1E2CCFFC0068F253 /* Build configuration list for PBXProject "Activity_10" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1327FF001E2CCFFD0068F253 /* Debug */,
@@ -300,6 +309,7 @@
 				1327FF041E2CCFFD0068F253 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
